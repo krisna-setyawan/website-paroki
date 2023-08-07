@@ -1,6 +1,13 @@
 <template>
   <div class="bg-section-180 pb-5">
     <v-container min-height="500">
+      <div class="text-center welcome-text">
+        <h1>GEREJA KATOLIK</h1>
+        <h2>PAROKI SANTO FRANSISKUS ASISI - RESAPOMBO, BLITAR</h2>
+      </div>
+
+      <v-divider class="my-5"></v-divider>
+
       <v-row class="d-flex justify-center">
         <v-col cols="12" sm="12" md="4" class="d-flex align-center">
           <v-card class="mx-auto py-5 text-center card-jadwal" min-width="100%">
@@ -75,40 +82,4 @@ export default {
 };
 </script>
 
-<style>
-@media only screen and (max-width: 599px) {
-  .card-jadwal span {
-    font-size: 120%;
-  }
-  .bg-section {
-    font-size: 98%;
-  }
-}
-
-.bg-section-180 {
-  background: rgb(255, 244, 230);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 244, 230, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-
-.bg-title {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 2rem;
-  border-radius: 10px;
-  padding: 0px 30px;
-  margin: 0% 10%;
-}
-
-.part-title {
-  color: #808b96;
-  font-size: 1.8rem;
-}
-
-.transparent-card {
-  background-color: rgba(255, 255, 255, 0);
-}
-</style>
+<style></style>

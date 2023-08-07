@@ -10,7 +10,9 @@
     >
       <v-toolbar-tittle>
         <NuxtLink to="/" class="text-decoration-none header-brand">
-          Paroki
+          <div class="logo-container">
+            <img src="../public/logo.jpg" alt="Logo" class="logo-image" />
+          </div>
         </NuxtLink>
       </v-toolbar-tittle>
 
@@ -19,24 +21,44 @@
       <v-toolbar-items class="hidden-xs-only">
         <v-list class="d-flex">
           <v-list-item>
-            <NuxtLink to="/profil" class="text-decoration-none link-menu">
-              <v-list-item-tittle class="mx-5">Profil</v-list-item-tittle>
+            <NuxtLink to="/profil" class="text-decoration-none">
+              <v-list-item-tittle
+                class="mx-5 nav-menu"
+                style="font-size: 1.1rem"
+                >Profil</v-list-item-tittle
+              >
             </NuxtLink>
 
-            <NuxtLink to="/sejarah" class="text-decoration-none link-menu">
-              <v-list-item-tittle class="mx-5">Sejarah</v-list-item-tittle>
+            <NuxtLink to="/sejarah" class="text-decoration-none">
+              <v-list-item-tittle
+                class="mx-5 nav-menu"
+                style="font-size: 1.1rem"
+                >Sejarah</v-list-item-tittle
+              >
             </NuxtLink>
 
-            <NuxtLink to="/berita" class="text-decoration-none link-menu">
-              <v-list-item-tittle class="mx-5">Berita</v-list-item-tittle>
+            <NuxtLink to="/berita" class="text-decoration-none">
+              <v-list-item-tittle
+                class="mx-5 nav-menu"
+                style="font-size: 1.1rem"
+                >Berita</v-list-item-tittle
+              >
             </NuxtLink>
 
-            <NuxtLink to="/artikel" class="text-decoration-none link-menu">
-              <v-list-item-tittle class="mx-5">Artikel</v-list-item-tittle>
+            <NuxtLink to="/artikel" class="text-decoration-none">
+              <v-list-item-tittle
+                class="mx-5 nav-menu"
+                style="font-size: 1.1rem"
+                >Artikel</v-list-item-tittle
+              >
             </NuxtLink>
 
-            <NuxtLink to="/produk-umkm" class="text-decoration-none link-menu">
-              <v-list-item-tittle class="mx-5">Produk UMKM</v-list-item-tittle>
+            <NuxtLink to="/produk-umkm" class="text-decoration-none">
+              <v-list-item-tittle
+                class="mx-5 nav-menu"
+                style="font-size: 1.1rem"
+                >Produk UMKM</v-list-item-tittle
+              >
             </NuxtLink>
           </v-list-item>
         </v-list>
@@ -45,18 +67,4 @@
   </div>
 </template>
 
-<style>
-.link-menu {
-  color: rgb(10, 10, 10);
-}
-
-.link-menu:hover {
-  color: #dc7633;
-}
-
-.header-brand {
-  color: #dc7633;
-  font-size: 2rem;
-  font-weight: bold;
-}
-</style>
+<style></style>

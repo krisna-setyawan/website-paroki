@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-section-360">
+  <div class="bg-section-180">
     <v-container min-height="500" max-width="50%">
       <div class="text-center mb-5">
-        <span class="section-title"> Berita </span>
+        <h1 class="headline">Berita</h1>
       </div>
       <v-row class="d-flex justify-center row-berita-artikel">
         <v-col cols="12" sm="6" md="4" v-for="berita in news" :key="berita.id">
@@ -76,26 +76,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.bg-section-360 {
-  background: rgb(255, 244, 230);
-  background: linear-gradient(
-    360deg,
-    rgba(255, 244, 230, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-
-@media only screen and (min-width: 927px) {
-  .row-berita-artikel {
-    padding: 0 10%;
-  }
-}
-
-@media only screen and (min-width: 599px) {
-  .row-berita-artikel {
-    padding: 0 6%;
-  }
-}
-</style>

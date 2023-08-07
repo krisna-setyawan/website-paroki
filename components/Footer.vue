@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-orange-lighten-3 text-center d-flex flex-column">
+  <v-footer class="bg-orange-darken-1 text-center d-flex flex-column">
     <div>
       <v-btn
         v-for="icon in icons"
@@ -10,26 +10,38 @@
       ></v-btn>
     </div>
 
-    <div class="pt-0">
-      Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris
-      cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id
-      ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui.
-      Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada.
-      Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin.
-      Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    <div class="pt-4">
+      <v-row class="px-5 d-flex justify-center">
+        <v-col cols="12" md="4" class="text-left">
+          <h2>Paroki Fransiskus Asis Resapombo</h2>
+          <p>Alamat : Jln. S. Supriadi No. 25 Ds. Resapombo</p>
+          <p>Kecamatan Doko, Kabupaten Blitar</p>
+          <p>Jawa Timur 66186</p>
+          <p>Telp : (0342) 6333504</p>
+          <p>Whatsapp : (0342) 6333504</p>
+        </v-col>
+        <v-col cols="12" md="4" class="text-left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Reprehenderit, accusantium minima expedita esse laboriosam et eius
+          eligendi ut veritatis suscipit. Atque saepe perferendis ipsa provident
+          magnam, laboriosam tenetur vel mollitia.
+        </v-col>
+      </v-row>
     </div>
 
-    <v-divider></v-divider>
+    <v-divider class="my-5"></v-divider>
 
-    <div>{{ new Date().getFullYear() }} — <strong>Vuetify</strong></div>
+    <div>
+      {{ new Date().getFullYear() }} —
+      <strong>Gereja Katolik Keuskupan Surabaya</strong>
+    </div>
   </v-footer>
 </template>
 
 <script>
 export default {
   data: () => ({
-    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+    icons: ["mdi-facebook", "mdi-youtube", "mdi-instagram"],
   }),
 };
 </script>
