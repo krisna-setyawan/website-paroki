@@ -9,26 +9,26 @@
 </template>
 
 <style>
+.section {
+  margin: 0px 0px;
+  padding: 00px 0px;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px; /* Ukuran container sesuaikan dengan kebutuhan */
-  height: 50px; /* Ukuran container sesuaikan dengan kebutuhan */
-  border: 2px solid black; /* Border hitam 2px */
-  border-radius: 50%; /* Membuat lingkaran */
-  overflow: hidden; /* Menghindari gambar keluar dari lingkaran */
-  margin: 0 auto; /* Pusatkan logo horizontal */
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .logo-image {
-  max-width: 100%; /* Agar gambar mengisi container */
-  display: block; /* Menghapus jarak bawah default pada gambar */
-}
-
-.section {
-  margin: 0px 0px;
-  padding: 50px 0px;
+  max-width: 100%;
+  display: block;
 }
 
 .header-brand {

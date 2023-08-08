@@ -21,14 +21,6 @@
       <v-toolbar-items class="hidden-xs-only">
         <v-list class="d-flex">
           <v-list-item>
-            <NuxtLink to="/profil" class="text-decoration-none">
-              <v-list-item-tittle
-                class="mx-5 nav-menu"
-                style="font-size: 1.1rem"
-                >Profil</v-list-item-tittle
-              >
-            </NuxtLink>
-
             <NuxtLink to="/sejarah" class="text-decoration-none">
               <v-list-item-tittle
                 class="mx-5 nav-menu"
