@@ -23,7 +23,7 @@ const { data: galeri } = await useFetch('https://api.slingacademy.com/v1/sample-
 
 <style>
 .section-sejarah {
-  margin: 0px 10px;
+  margin: 0px 30px;
   text-align: justify;
 }
 
@@ -40,26 +40,43 @@ const { data: galeri } = await useFetch('https://api.slingacademy.com/v1/sample-
 
 @media only screen and (min-width: 927px) {
   .section-sejarah {
-    margin: 0px 40px;
+    margin: 0px 100px;
     text-align: justify;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .section-sejarah {
-    margin: 0px 60px;
+    margin: 0px 150px;
+    text-align: justify;
+  }
+
+  /* 
+  .section-galeri {
+    margin: 0px 70px;
+  } */
+}
+
+@media only screen and (min-width: 1669px) {
+  .section-sejarah {
+    margin: 0px 200px;
+    text-align: justify;
+  }
+
+  /* 
+  .section-galeri {
+    margin: 0px 70px;
+  } */
+}
+
+@media only screen and (min-width: 1920px) {
+  .section-sejarah {
+    margin: 0px 200px;
     text-align: justify;
   }
 
   .section-galeri {
     margin: 0px 70px;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .section-sejarah {
-    margin: 0px 120px;
-    text-align: justify;
   }
 }
 </style>

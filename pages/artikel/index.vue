@@ -3,13 +3,13 @@
     <div class="bg-section-180">
 
       <div class="text-center mb-5">
-        <h1 class="headline">Berita</h1>
+        <h1 class="headline">Artikel</h1>
       </div>
 
-      <div class="wrapper-berita">
+      <div class="wrapper-artikel">
         <div v-for="brt in news.slice(0, displayedNewsCount)" :key="brt.id">
 
-          <CardBeritaInList :berita="brt" />
+          <CardArtikelInList :artikel="brt" />
 
         </div>
       </div>
@@ -30,7 +30,7 @@ const loadMore = () => {
 };
 
 const { data: news } = await useFetch(
-  "https://api.imavi.org/imavi/news/get-all",
+  "https://api.imavi.org/imavi/articles/get-all",
   {
     headers: {
       id: "618db358b9d7140e7025b86b",
@@ -42,34 +42,34 @@ const { data: news } = await useFetch(
 </script>
 
 <style>
-.wrapper-berita {
+.wrapper-artikel {
   margin: 0px 10px;
   text-align: justify;
 }
 
 @media only screen and (min-width: 599px) {
-  .wrapper-berita {
+  .wrapper-artikel {
     margin: 0px 50px;
     text-align: justify;
   }
 }
 
 @media only screen and (min-width: 927px) {
-  .wrapper-berita {
+  .wrapper-artikel {
     margin: 0px 40px;
     text-align: justify;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .wrapper-berita {
+  .wrapper-artikel {
     margin: 0px 60px;
     text-align: justify;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .wrapper-berita {
+  .wrapper-artikel {
     margin: 0px 120px;
     text-align: justify;
   }

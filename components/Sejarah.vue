@@ -1,11 +1,9 @@
 <template>
   <div class="bg-section-180">
-    <v-container min-height="500" max-width="50%">
-      <div class="text-center mb-5">
-        <h1 class="headline">Sejarah</h1>
-      </div>
-      <div class="section-sejarah" v-html="sejarah.content"></div>
-    </v-container>
+    <div class="text-center mb-5">
+      <h1 class="headline">Sejarah</h1>
+    </div>
+    <div class="section-sejarah" v-html="sejarah.content"></div>
   </div>
 </template>
 

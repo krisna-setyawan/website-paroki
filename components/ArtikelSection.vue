@@ -1,14 +1,22 @@
 <template>
-  <div class="bg-section-360">
-    <v-container min-height="500" max-width="50%" style="padding: 60px 0px">
+  <div class="bg-section-360" style="padding-bottom: 30px;">
+    <v-container min-height="500">
       <div class="text-center mb-5">
         <h1 class="headline">Artikel</h1>
       </div>
       <v-row class="d-flex justify-center row-berita-artikel">
-        <v-col cols="11" sm="6" md="6" lg="4" v-for="art in articles.slice(0, 5)" :key="art.id">
+        <v-col cols="12" sm="6" md="6" lg="4" v-for="art in articles.slice(0, 5)" :key="art.id">
           <ArtikelCard :artikel="art" />
         </v-col>
       </v-row>
+      <div class="d-flex justify-center mt-5">
+        <v-btn variant="outlined" rounded="xl" size="x-large">
+          <NuxtLink to="/artikel" class="text-decoration-none text-grey-darken-4">
+            Artikel lainnya
+          </NuxtLink>
+        </v-btn>
+      </div>
+
     </v-container>
   </div>
 </template>

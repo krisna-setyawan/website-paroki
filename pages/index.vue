@@ -62,20 +62,22 @@
   max-width: 400px;
   position: relative;
 }
+
 .headline:before {
   content: "";
   display: block;
-  width: 100px;
+  width: 80px;
   height: 5px;
   background: #2e4053;
   left: 0;
   top: 50%;
   position: absolute;
 }
+
 .headline:after {
   content: "";
   display: block;
-  width: 100px;
+  width: 80px;
   height: 5px;
   background: #2e4053;
   right: 0;
@@ -88,9 +90,11 @@
   .card-jadwal span {
     font-size: 120%;
   }
+
   .bg-section {
     font-size: 98%;
   }
+
   .row-berita-artikel {
     padding: 0 6%;
   }
@@ -104,24 +108,22 @@
 
 .bg-section-180 {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(255, 231, 198, 1) 0%,
-    rgba(255, 216, 165, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(255, 231, 198, 1) 0%,
+      rgba(255, 216, 165, 1) 0%,
+      rgba(255, 255, 255, 1) 100%);
+  padding: 10px 0px;
 }
 
 .bg-section-360 {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    360deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(255, 231, 198, 1) 0%,
-    rgba(255, 216, 165, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: linear-gradient(360deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(255, 231, 198, 1) 0%,
+      rgba(255, 216, 165, 1) 0%,
+      rgba(255, 255, 255, 1) 100%);
+  padding: 10px 0px;
 }
 
 .bg-title {
@@ -151,5 +153,13 @@
   color: #283747;
   text-align: justify;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.judul-content {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.isi-content {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 </style>

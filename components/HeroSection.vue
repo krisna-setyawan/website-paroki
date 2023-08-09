@@ -32,7 +32,7 @@
 
             <v-carousel cycle :interval="2000" hide-delimiters show-arrows="hover" style="border-radius: 6px">
               <v-carousel-item v-for="(item, index) in carouselItems" :key="index" :src="item.imageUrl"
-                :alt="item.caption" cover>
+                :lazy-src="item.imageUrl" :alt="item.caption" cover>
                 <div class="d-flex fill-height justify-center align-end">
                   <span class="bg-title mb-3">{{ item.caption }}</span>
                 </div>
@@ -53,13 +53,12 @@ export default {
         {
           imageUrl:
             "https://news-id.gerejayesuskristus.org/media/960x540/tangerangcleanup-1.jpeg",
-          caption: "Keterangan Gambar 1",
+          caption: "Lorem ipsum dolor Lorem, ipsum dolor.",
         },
         {
           imageUrl:
             "https://news-id.gerejayesuskristus.org/media/960x720/tangerangcleanup-2.jpeg",
-          caption:
-            "Keterangan Gambar 2 Keterangan Gambar 2 Keterangan Gambar 2",
+          caption: "Lorem ipsum dolor sit amet consectetur adipisicing.",
         },
       ],
     };

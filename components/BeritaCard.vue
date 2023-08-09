@@ -1,9 +1,12 @@
 <template>
   <v-card class="mx-auto" min-height="350">
-    <v-img class="align-end text-white" height="200" :src="berita.imageLink
-      ? berita.imageLink
-      : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'
-      " cover>
+    <v-img class="align-end text-white" height="200"
+      :lazy-src="berita.imageLink
+        ? berita.imageLink
+        : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
+      :src="berita.imageLink
+        ? berita.imageLink
+        : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'" cover>
     </v-img>
 
     <v-card-text>
