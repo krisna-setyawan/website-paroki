@@ -33,10 +33,10 @@
     </v-card-text>
 
     <v-card-actions class="d-flex fill-height justify-center align-self-end mb-4">
-      <v-btn color="brown" variant="outlined">
-        Bagikan
+      <v-btn prepend-icon="mdi-shopping-outline" color="brown" variant="outlined">
+        Beli
       </v-btn>
-      <v-btn color="brown" variant="outlined">
+      <v-btn prepend-icon="mdi-whatsapp" color="brown" variant="outlined">
         Chat
       </v-btn>
     </v-card-actions>

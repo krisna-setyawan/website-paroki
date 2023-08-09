@@ -2,12 +2,12 @@
   <div class="bg-section-180">
     <v-container min-height="500" max-width="50%">
       <v-row class="d-flex justify-space-between">
-        <v-col cols="9">
+        <v-col cols="12" sm="9">
           <h1 class="judul-content">{{ berita.title }}</h1>
           <p>Author : {{ berita.author }}</p>
           <small>Published : {{ formatDate(berita.publishDate) }}</small>
         </v-col>
-        <v-col cols="3" class="text-end">
+        <v-col cols="12" sm="3" class="text-end">
           <v-btn prepend-icon="mdi-search-web" class="mx-3 mb-3">
             <a v-bind:href="berita.originalUrl">
               Lihat Sumber

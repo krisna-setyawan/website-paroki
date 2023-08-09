@@ -7,7 +7,7 @@
     <div class="pt-4">
       <v-row class="px-5 d-flex justify-center">
         <v-col cols="12" md="4" class="text-left">
-          <h2>Paroki Fransiskus Asis Resapombo</h2>
+          <h2>Paroki Fransiskus Asisi Resapombo</h2>
           <p class="mb-0">Alamat : Jln. S. Supriadi No. 25 Ds. Resapombo</p>
           <p class="mb-0">Kecamatan Doko, Kabupaten Blitar</p>
           <p class="mb-0">Jawa Timur 66186</p>

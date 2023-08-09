@@ -20,6 +20,11 @@
             </nuxt-link>
           </li>
           <li class="nav-item">
+            <nuxt-link to="/tentang" class="nav-link text-orange-darken-1 fs-5 ms-5">
+              Tentang
+            </nuxt-link>
+          </li>
+          <li class="nav-item">
             <nuxt-link to="/sejarah" class="nav-link text-orange-darken-1 fs-5 ms-5">
               Sejarah
             </nuxt-link>
@@ -45,9 +50,28 @@
   </nav>
 </template>
 
+<script>
+export default {
+  mounted() {
+    const navLinks = document.querySelectorAll(".navbar-nav li");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (navbarCollapse.classList.contains("show")) {
+          navbarCollapse.classList.remove("show");
+        }
+      });
+    });
+  }
+}
+</script>
+
 <style>
 .nav-link:hover {
-  font-weight: 500;
+  display: inline-block;
+  border-bottom: 2px solid #FB8C00;
+  padding-bottom: 2px;
 }
 </style>
 <!-- 

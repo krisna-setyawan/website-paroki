@@ -10,17 +10,17 @@
 
       <v-row class="d-flex justify-center">
         <v-col cols="11" sm="9" md="5" lg="4" class="d-flex align-center">
-          <v-card class="mx-auto py-5 text-center card-jadwal" min-width="100%">
+          <v-card class="mx-auto py-5 text-center card-jadwal bg-orange-lighten-5" min-width="100%" elevation="2">
             <span class="mb-5 part-title">Jadwal Misa</span>
-            <v-list class="mx-5">Jumat : 17:00 WIB</v-list>
-            <v-list class="mx-5">Sabtu : 18:00 WIB</v-list>
-            <v-list class="mx-5">Minggu : 07:00 & 10:00 WIB</v-list>
+            <v-list class="mx-5  bg-orange-lighten-5">Jumat : 17:00 WIB</v-list>
+            <v-list class="mx-5  bg-orange-lighten-5">Sabtu : 18:00 WIB</v-list>
+            <v-list class="mx-5  bg-orange-lighten-5">Minggu : 07:00 & 10:00 WIB</v-list>
             <v-divider class="my-5"></v-divider>
             <span class="mb-5 part-title">Sekolah Minggu</span>
-            <v-list class="mx-5">Minggu : 06:00 WIB</v-list>
+            <v-list class="mx-5  bg-orange-lighten-5">Minggu : 06:00 WIB</v-list>
             <v-divider class="my-5"></v-divider>
             <span class="mb-5 part-title">Jadwal Sakramen Tobat</span>
-            <v-list class="mx-5">20 Maret 2023, 17:00 WIB</v-list>
+            <v-list class="mx-5  bg-orange-lighten-5">20 Maret 2023, 17:00 WIB</v-list>
           </v-card>
         </v-col>
 

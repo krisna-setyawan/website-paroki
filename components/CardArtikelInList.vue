@@ -18,8 +18,11 @@
         <h3>{{ artikel.title }}</h3>
         <div>{{ extractFirstSentence(artikel.content) }}</div>
         <br>
-        <h5>Author : {{ artikel.author }}</h5>
-        <small>{{ formatDate(artikel.publishDate) }}</small>
+        <small>Author : {{ artikel.author }}</small>
+        <br>
+        <small>Sumber : {{ artikel.originalUrl }}</small>
+        <br>
+        <small>Published : {{ formatDate(artikel.publishDate) }}</small>
       </v-col>
     </v-row>
   </v-card>
