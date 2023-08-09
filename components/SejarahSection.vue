@@ -5,14 +5,11 @@
         <h1 class="headline">Sejarah</h1>
       </div>
       <v-row class="d-flex justify-center">
-        <v-col cols="10" sm="5" md="4">
-          <v-img
-            cover
-            style="border-radius: 6px"
-            src="https://2.bp.blogspot.com/-mFtmNSIDHDM/VbxoGWkk94I/AAAAAAAAE0A/wzgve8To-P8/s1600/IMG_9155.JPG"
-          ></v-img>
+        <v-col cols="11" sm="9" md="6" lg="6" xl="4">
+          <v-img cover style="border-radius: 6px"
+            src="https://2.bp.blogspot.com/-mFtmNSIDHDM/VbxoGWkk94I/AAAAAAAAE0A/wzgve8To-P8/s1600/IMG_9155.JPG"></v-img>
         </v-col>
-        <v-col cols="10" sm="5" md="4">
+        <v-col cols="11" sm="10" md="6" lg="6" xl="4">
           <p class="text-desc fs-xs-5 fs-sm-4 fs-md-3">{{ sejarah1 }}</p>
           <br />
           <p class="text-desc fs-xs-5 fs-sm-4 fs-md-3">

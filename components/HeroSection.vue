@@ -9,7 +9,7 @@
       <v-divider class="my-5"></v-divider>
 
       <v-row class="d-flex justify-center">
-        <v-col cols="12" sm="12" md="4" class="d-flex align-center">
+        <v-col cols="11" sm="9" md="5" lg="4" class="d-flex align-center">
           <v-card class="mx-auto py-5 text-center card-jadwal" min-width="100%">
             <span class="mb-5 part-title">Jadwal Misa</span>
             <v-list class="mx-5">Jumat : 17:00 WIB</v-list>
@@ -24,30 +24,15 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12" sm="12" md="6" class="text-center">
-          <v-card
-            class="mx-auto py-5 transparent-card"
-            min-width="100%"
-            elevation="0"
-          >
+        <v-col cols="11" sm="9" md="7" lg="6" class="text-center">
+          <v-card class="mx-auto py-5 transparent-card" min-width="100%" elevation="0">
             <div class="mb-3">
               <span class="text-center part-title">Kegiatan Paroki</span>
             </div>
 
-            <v-carousel
-              cycle
-              :interval="2000"
-              hide-delimiters
-              show-arrows="hover"
-              style="border-radius: 6px"
-            >
-              <v-carousel-item
-                v-for="(item, index) in carouselItems"
-                :key="index"
-                :src="item.imageUrl"
-                :alt="item.caption"
-                cover
-              >
+            <v-carousel cycle :interval="2000" hide-delimiters show-arrows="hover" style="border-radius: 6px">
+              <v-carousel-item v-for="(item, index) in carouselItems" :key="index" :src="item.imageUrl"
+                :alt="item.caption" cover>
                 <div class="d-flex fill-height justify-center align-end">
                   <span class="bg-title mb-3">{{ item.caption }}</span>
                 </div>
