@@ -1,9 +1,8 @@
 <template>
-  <v-card class="mx-auto" style="padding: 30px 0px; margin-bottom: 20px; background-color: rgba(255, 255, 255, 0);"
-    elevation="0">
+  <v-card class="mx-5" style="padding: 20px 0px; margin-bottom: 40px;" elevation="3">
     <v-row class="d-flex justify-center">
-      <v-col cols="10" sm="6" md="5" xl="4">
-        <v-img class="align-end text-white rounded bg-grey-lighten-2" height="200"
+      <v-col cols="10" sm="6" md="5" xl="5">
+        <v-img class="align-end text-white rounded bg-grey-lighten-2" height="280"
           :src="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
           :lazy-src="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
           cover>
@@ -14,15 +13,13 @@
           </template>
         </v-img>
       </v-col>
-      <v-col cols="10" sm="6" md="6" xl="5">
+      <v-col cols="10" sm="6" md="6" xl="6">
         <h3>{{ artikel.title }}</h3>
         <div>{{ extractFirstSentence(artikel.content) }}</div>
         <br>
-        <small>Author : {{ artikel.author }}</small>
-        <br>
-        <small>Sumber : {{ artikel.originalUrl }}</small>
-        <br>
-        <small>Published : {{ formatDate(artikel.publishDate) }}</small>
+        <p class="mb-1">Author : {{ artikel.author }}</p>
+        <p class="mb-1">Sumber : {{ artikel.originalUrl }}</p>
+        <p class="mb-1">Published : {{ formatDate(artikel.publishDate) }}</p>
       </v-col>
     </v-row>
   </v-card>

@@ -1,9 +1,8 @@
 <template>
-  <v-card class="mx-auto" style="padding: 30px 0px; margin-bottom: 20px; background-color: rgba(255, 255, 255, 0);"
-    elevation="0">
+  <v-card class="mx-5" style="padding: 20px 0px; margin-bottom: 40px; " elevation="3">
     <v-row class="d-flex justify-center">
-      <v-col cols="10" sm="5" md="5" xl="4">
-        <v-img class="align-end text-white rounded bg-grey-lighten-2" height="200"
+      <v-col cols="10" sm="5" md="5" xl="5">
+        <v-img class="align-end text-white rounded bg-grey-lighten-2" height="300"
           :lazy-src="berita.imageLink ? berita.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
           :src="berita.imageLink ? berita.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
           cover>
@@ -15,16 +14,13 @@
         </v-img>
       </v-col>
 
-      <v-col cols="10" sm="6" md="6" xl="5">
+      <v-col cols="10" sm="6" md="6" xl="6">
         <h4>{{ berita.title }}</h4>
         <div>{{ extractFirstSentence(berita.content) }}</div>
-
-        <small>Author : {{ berita.author }}</small>
         <br>
-        <small>Sumber : {{ berita.originalUrl }}</small>
-        <br>
-        <small>Published : {{ formatDate(berita.publishDate) }}</small>
-        <br>
+        <p class="mb-1">Author : {{ berita.author }}</p>
+        <p class="mb-1">Sumber : {{ berita.originalUrl }}</p>
+        <p class="mb-1">Published : {{ formatDate(berita.publishDate) }}</p>
         <v-btn color="orange-lighten-3" class="mt-4">
           <NuxtLink :to="`/berita/${berita.slug}`" class="text-decoration-none text-orange-darken-3">
             Baca berita

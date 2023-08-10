@@ -17,10 +17,8 @@
       <h1 class="text-brown-darken-4 mb-5">{{ produk.title }}</h1>
       <p class="mb-1"> <b>Deskripsi : </b></p>
       <p>{{ produk.description }}</p>
-      <br>
       <p class="mb-1"> <b>Kategori : </b></p>
       <p>{{ produk.category }}</p>
-      <br>
       <p class="mb-1"> <b>Harga : </b></p>
       <p>${{ produk.price }}</p>
       <br>

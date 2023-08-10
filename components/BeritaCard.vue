@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" min-height="350">
+  <v-card class="mx-auto" min-height="300">
     <v-img class="align-end text-white" height="200"
       :lazy-src="berita.imageLink
         ? berita.imageLink
@@ -10,7 +10,7 @@
     </v-img>
 
     <v-card-text>
-      <b>{{ berita.title }}</b>
+      <b class="lp-card-title">{{ berita.title }}</b>
       <br />
       <small>{{ formatDate(berita.publishDate) }}</small>
     </v-card-text>
@@ -34,3 +34,14 @@ const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString(locale, options);
 };
 </script>
+
+<style>
+.lp-card-title {
+  font-size: 17px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
