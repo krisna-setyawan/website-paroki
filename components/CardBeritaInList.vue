@@ -16,17 +16,15 @@
       </v-col>
 
       <v-col cols="10" sm="6" md="6" xl="5">
-        <h3>{{ berita.title }}</h3>
+        <h4>{{ berita.title }}</h4>
         <div>{{ extractFirstSentence(berita.content) }}</div>
-        <br>
+
         <small>Author : {{ berita.author }}</small>
         <br>
         <small>Sumber : {{ berita.originalUrl }}</small>
         <br>
         <small>Published : {{ formatDate(berita.publishDate) }}</small>
-      </v-col>
-
-      <v-col cols="10" sm="1" md="1" xl="1" class="align-self-end">
+        <br>
         <v-btn color="orange-lighten-3" class="mt-4">
           <NuxtLink :to="`/berita/${berita.slug}`" class="text-decoration-none text-orange-darken-3">
             Baca berita

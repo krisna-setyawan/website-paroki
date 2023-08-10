@@ -36,39 +36,3 @@ const loadMore = () => {
 
 const { data: produk } = await useFetch("https://fakestoreapi.com/products");
 </script>
-
-
-<style>
-.wrapper-produk {
-  margin: 0px 10px;
-  text-align: justify;
-}
-
-@media only screen and (min-width: 599px) {
-  .wrapper-produk {
-    margin: 0px 50px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 927px) {
-  .wrapper-produk {
-    margin: 0px 40px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .wrapper-produk {
-    margin: 0px 60px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .wrapper-produk {
-    margin: 0px 120px;
-    text-align: justify;
-  }
-}
-</style>

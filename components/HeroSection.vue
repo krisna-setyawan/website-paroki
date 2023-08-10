@@ -25,12 +25,12 @@
         </v-col>
 
         <v-col cols="11" sm="9" md="7" lg="6" class="text-center">
-          <v-card class="mx-auto py-5 transparent-card" min-width="100%" elevation="0">
-            <div class="mb-3">
+          <v-card class="mx-auto bg-orange-lighten-5" min-width="100%" elevation="2" style="border-radius: 6px">
+            <div class="border-b-lg py-2">
               <span class="text-center part-title">Kegiatan Paroki</span>
             </div>
 
-            <v-carousel cycle :interval="2000" hide-delimiters show-arrows="hover" style="border-radius: 6px">
+            <v-carousel cycle :interval="2000" hide-delimiters show-arrows="hover">
               <v-carousel-item v-for="(item, index) in carouselItems" :key="index" :src="item.imageUrl"
                 :lazy-src="item.imageUrl" :alt="item.caption" cover>
                 <div class="d-flex fill-height justify-center align-end">

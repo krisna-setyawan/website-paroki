@@ -1,6 +1,6 @@
 <template>
   <div class="bg-section-180">
-    <v-container min-height="500" max-width="50%">
+    <v-container class="wrapper-produk">
       <ContentDetailBerita :berita="berita" />
     </v-container>
   </div>

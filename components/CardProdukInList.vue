@@ -33,11 +33,16 @@
     </v-card-text>
 
     <v-card-actions class="d-flex fill-height justify-center align-self-end mb-4">
+      <v-btn prepend-icon="mdi-eye-outline" color="brown" variant="outlined">
+        <NuxtLink :to="`/produk-umkm/${produk.id}`" style="color: inherit; text-decoration: none;">
+          Detail
+        </NuxtLink>
+      </v-btn>
       <v-btn prepend-icon="mdi-shopping-outline" color="brown" variant="outlined">
         Beli
       </v-btn>
-      <v-btn prepend-icon="mdi-whatsapp" color="brown" variant="outlined">
-        Chat
+      <v-btn prepend-icon="mdi-whatsapp" color="brown" variant="outlined" @click="bagikanWhatsApp(produk.id)">
+        Bagikan
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -46,4 +51,13 @@
 
 <script setup>
 const { produk } = defineProps(["produk"]);
+
+const bagikanWhatsApp = (id) => {
+  const currentPageURL = window.location.href + '/' + + id;
+  const pesanTambahan = 'Hallo guys, ada produk yang menarik nih. coba cek ';
+  const fullMessage = `${pesanTambahan} ${currentPageURL}`;
+  const encodedURL = encodeURIComponent(fullMessage);
+  const whatsappURL = `https://api.whatsapp.com/send?text=${encodedURL}`;
+  window.open(whatsappURL, '_blank');
+};
 </script>

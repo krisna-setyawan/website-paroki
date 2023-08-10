@@ -20,11 +20,25 @@ export default defineNuxtConfig({
 
   css: [
     "vuetify/styles/main.sass",
-    "@mdi/font/css/materialdesignicons.css"
+    "@mdi/font/css/materialdesignicons.css",
+    "~/assets/css/main.css"
   ],
   build: {
     transpile: ["vuetify"],
   },
 
-  devtools: { enabled: false }
+  devtools: { enabled: false },
+
+  ssr: false
 })
+
+
+
+
+
+// link: [
+//   { rel: 'stylesheet', href: 'assets/bootstrap/css/bootstrap.min.css' }
+// ],
+// script: [
+//   { src: 'assets/bootstrap/js/bootstrap.bundle.min.js', defer: true }
+// ],

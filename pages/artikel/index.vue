@@ -40,38 +40,3 @@ const { data: news } = await useFetch(
   }
 );
 </script>
-
-<style>
-.wrapper-artikel {
-  margin: 0px 10px;
-  text-align: justify;
-}
-
-@media only screen and (min-width: 599px) {
-  .wrapper-artikel {
-    margin: 0px 50px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 927px) {
-  .wrapper-artikel {
-    margin: 0px 40px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .wrapper-artikel {
-    margin: 0px 60px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .wrapper-artikel {
-    margin: 0px 120px;
-    text-align: justify;
-  }
-}
-</style>
