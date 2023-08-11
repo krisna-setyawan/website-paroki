@@ -97,22 +97,24 @@
 }
 
 .bg-section-180 {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(180deg,
+  background: #F1F6F9;
+  /* background: rgb(2, 0, 36); */
+  /* background: linear-gradient(180deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(255, 231, 198, 1) 0%,
       rgba(255, 216, 165, 1) 0%,
-      rgba(255, 255, 255, 1) 100%);
+      rgba(255, 255, 255, 1) 100%); */
   padding: 10px 0px;
 }
 
 .bg-section-360 {
-  background: rgb(2, 0, 36);
+  background: #F1F6F9;
+  /* background: rgb(2, 0, 36);
   background: linear-gradient(360deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(255, 231, 198, 1) 0%,
       rgba(255, 216, 165, 1) 0%,
-      rgba(255, 255, 255, 1) 100%);
+      rgba(255, 255, 255, 1) 100%); */
   padding: 10px 0px;
 }
 

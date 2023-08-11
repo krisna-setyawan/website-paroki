@@ -10,26 +10,24 @@
 
       <v-row class="d-flex justify-center">
         <v-col cols="11" sm="9" md="5" lg="4" class="d-flex align-center">
-          <v-card class="mx-auto py-5 text-center card-jadwal bg-orange-lighten-5" min-height="560" min-width="100%"
-            elevation="2">
+          <v-card class="mx-auto py-5 text-center card-jadwal" min-height="560" min-width="100%" elevation="2">
             <div class="py-auto coba">
               <span class="mb-0 part-title">Jadwal Misa</span>
-              <v-list class="mx-5  bg-orange-lighten-5">Jumat : 17:00 WIB</v-list>
-              <v-list class="mx-5  bg-orange-lighten-5">Sabtu : 18:00 WIB</v-list>
-              <v-list class="mx-5  bg-orange-lighten-5">Minggu : 07:00 & 10:00 WIB</v-list>
+              <v-list class="mx-5 ">Jumat : 17:00 WIB</v-list>
+              <v-list class="mx-5 ">Sabtu : 18:00 WIB</v-list>
+              <v-list class="mx-5 ">Minggu : 07:00 & 10:00 WIB</v-list>
               <v-divider class="my-5"></v-divider>
               <span class="mb-0 part-title">Sekolah Minggu</span>
-              <v-list class="mx-5  bg-orange-lighten-5">Minggu : 06:00 WIB</v-list>
+              <v-list class="mx-5 ">Minggu : 06:00 WIB</v-list>
               <v-divider class="my-5"></v-divider>
               <span class="mb-0 part-title">Jadwal Sakramen Tobat</span>
-              <v-list class="mx-5  bg-orange-lighten-5">20 Maret 2023, 17:00 WIB</v-list>
+              <v-list class="mx-5 ">20 Maret 2023, 17:00 WIB</v-list>
             </div>
           </v-card>
         </v-col>
 
         <v-col cols="11" sm="9" md="7" lg="6" class="text-center">
-          <v-card class="mx-auto bg-orange-lighten-5" min-height="560" min-width="100%" elevation="2"
-            style="border-radius: 6px">
+          <v-card class="mx-auto" min-height="560" min-width="100%" elevation="2" style="border-radius: 6px">
             <div class="border-b-lg py-2">
               <span class="text-center part-title">Kegiatan Paroki</span>
             </div>
