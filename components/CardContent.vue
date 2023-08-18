@@ -15,7 +15,7 @@
       <small>{{ formatDate(post.publishDate) }}</small>
     </v-card-text>
 
-    <ButtonReadPost :jenisPost="jenisPost" :post="post" />
+    <ButtonReadPost :jenisPost="jenisPost" :post="post" class="m-3" />
   </v-card>
 </template>
 

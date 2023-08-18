@@ -11,7 +11,7 @@
       <v-row class="d-flex justify-center">
         <v-col cols="11" sm="9" md="5" lg="4" class="d-flex align-center">
           <v-card class="mx-auto py-5 text-center card-jadwal" min-height="560" min-width="100%" elevation="2">
-            <div class="py-auto coba">
+            <div class="py-auto">
               <span class="mb-0 part-title">Jadwal Misa</span>
               <v-list class="mx-5 ">Jumat : 17:00 WIB</v-list>
               <v-list class="mx-5 ">Sabtu : 18:00 WIB</v-list>
@@ -32,14 +32,33 @@
               <span class="text-center part-title">Kegiatan Paroki</span>
             </div>
 
-            <v-carousel cycle :interval="2000" hide-delimiters show-arrows="hover">
+            <v-carousel cycle :interval="2000" hide-delimiters show-arrows="hover" min-height="600">
               <v-carousel-item v-for="(item, index) in carouselItems" :key="index" :src="item.imageUrl"
-                :lazy-src="item.imageUrl" :alt="item.caption" cover min-width="100%">
+                :lazy-src="item.imageUrl" :alt="item.caption" cover min-height="100%">
                 <div class="d-flex fill-height justify-center align-end">
                   <span class="bg-title mb-3">{{ item.caption }}</span>
                 </div>
               </v-carousel-item>
             </v-carousel>
+
+            <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" v-for="(item, index) in carouselItems" :key="index">
+                <div class="carousel-item" :class="[{ active: index === 0 }]">
+                  <img :src="item.imageUrl" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div> -->
+
           </v-card>
         </v-col>
       </v-row>
@@ -67,12 +86,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.coba {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-</style>

@@ -1,35 +1,12 @@
 <template>
   <div>
-    <div class="bg-section-180">
-
-      <div class="text-center mb-5">
-        <h1 class="headline">Artikel</h1>
-      </div>
-
-      <div class="wrapper-artikel">
-        <div v-for="brt in news.slice(0, displayedNewsCount)" :key="brt.id">
-
-          <CardArtikelInList :artikel="brt" />
-
-        </div>
-      </div>
-      <div class="d-flex justify-center mb-5">
-        <v-btn variant="outlined" rounded="xl" size="x-large" @click="loadMore">Load more ..</v-btn>
-      </div>
-
-    </div>
+    <PageListPost :posts="artikel" jenisPost="Artikel" />
     <Footer class="section" />
   </div>
 </template>
 
 <script setup>
-const displayedNewsCount = ref(5); // load pertama 5
-
-const loadMore = () => {
-  displayedNewsCount.value += 5; // lalu tambah 5
-};
-
-const { data: news } = await useFetch(
+const { data: artikel } = await useFetch(
   "https://api.imavi.org/imavi/articles/get-all",
   {
     headers: {

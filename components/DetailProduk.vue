@@ -3,7 +3,9 @@
 
     <v-col cols="12" sm="3">
       <div class="bg-white py-4" style="border-radius: 10px;">
-        <v-img class="my-5 mx-5" height="600" :src="produk.image" :lazy-src="produk.image">
+        <v-img class="my-5 mx-5" height="600"
+          :lazy-src="produk.images ? produk.images : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
+          :src="produk.images ? produk.images : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'">
           <template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
@@ -14,13 +16,17 @@
     </v-col>
 
     <v-col cols="12" sm="5">
-      <h1 class="text-brown-darken-4 mb-5">{{ produk.title }}</h1>
+      <h1 class="text-brown-darken-4 mb-5">{{ produk.name }}</h1>
       <p class="mb-1"> <b>Deskripsi : </b></p>
-      <p>{{ produk.description }}</p>
-      <p class="mb-1"> <b>Kategori : </b></p>
-      <p>{{ produk.category }}</p>
-      <p class="mb-1"> <b>Harga : </b></p>
-      <p>${{ produk.price }}</p>
+      <div v-html="produk.description"></div>
+      <p class="mb-1"> Kategori : {{ produk.categoryName }}</p>
+      <p class="mb-1"> Harga : Rp. {{ produk.price }}</p>
+      <div>Produk : {{ produk.weight }} {{ produk.unit }}</div>
+
+      <br>
+      <div>Paroki : {{ produk.parokiName }}</div>
+      <div>Keuskupan : {{ produk.keuskupanName }}</div>
+      <div>Toko : {{ produk.shopName }}</div>
       <br>
 
       <v-btn prepend-icon="mdi-shopping-outline" color="brown" variant="outlined" class="mx-2">

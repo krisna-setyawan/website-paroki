@@ -1,54 +1,41 @@
 <template>
-  <v-card class="mx-auto mb-5" max-width="98%">
-    <v-img
-      :lazy-src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
-      :src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
-      height="200px" cover>
-      <template v-slot:placeholder>
-        <v-row class="fill-height ma-0" align="center" justify="center">
-          <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
-        </v-row>
-      </template>
-    </v-img>
+  <v-card class="mx-5" style="padding: 20px 0px; margin-bottom: 40px; position: relative;" elevation="3">
+    <v-row class="d-flex justify-center">
+      <v-col cols="10" sm="6" md="5" xl="5">
+        <v-img class="align-end text-white rounded bg-grey-lighten-2 text-center"
+          :lazy-src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
+          :src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
+          height="270" cover>
+          <template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
+            </v-row>
+          </template>
+        </v-img>
+      </v-col>
+      <v-col cols="10" sm="6" md="6" xl="6" style="text-align: left;">
+        <h4>{{ post.title }}</h4>
 
-    <v-card-title>
-      {{ post.title }}
-    </v-card-title>
+        <!-- <div>{{ }}</div> -->
 
-    <div v-if="post.excerpt">
-      <v-card-subtitle>
-        {{ post.excerpt }}
-      </v-card-subtitle>
-    </div>
-
-    <div class="ms-5">
-      <small>Author : {{ post.author }}</small>
-      <br>
-      <small>Sumber : {{ post.originalUrl }}</small>
-    </div>
-
-    <v-card-actions>
-      <!-- <ButtonReadPost :jenisPost="jenisPost" :post="post" /> -->
-      <v-btn color="orange-lighten-3" class="m-3">
-        <NuxtLink :to="`/${jenisPost}/${post.slug}`" class="text-decoration-none text-orange-darken-3">
-          Baca {{ jenisPost }}
-        </NuxtLink>
-      </v-btn>
-
-      <v-spacer></v-spacer>
-
-      <v-btn :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'" @click="show = !show"></v-btn>
-    </v-card-actions>
-
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-
-        <v-card-text>
+        <div v-if="post.excerpt">
+          {{ post.excerpt ? post.excerpt : '-' }}
+        </div>
+        <div v-else>
           {{ extractFirstSentence(post.content) }}
-        </v-card-text>
-      </div>
-    </v-expand-transition>
+        </div>
+
+        <br>
+        <p style="font-size: 13px;" class="mb-1">Author : {{ post.author }}</p>
+        <p style="font-size: 13px;" class="mb-1">Sumber : {{ post.originalUrl }}</p>
+
+
+        <ButtonReadPost :jenisPost="jenisPost" :post="post" style="position: absolute ; bottom: 25px;" />
+        <small style="position: absolute ; bottom: 35px; right: 30px; color: grey;">Published : {{
+          formatDate(post.publishDate) }}
+        </small>
+      </v-col>
+    </v-row>
   </v-card>
 </template>
 
@@ -75,3 +62,51 @@ const extractFirstSentence = (htmlContent) => {
   return firstSentence;
 };
 </script>
+
+
+
+<!-- Sorry Backup -->
+<!-- <v-card class="mx-auto mb-5" max-width="98%">
+    <v-img
+      :lazy-src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
+      :src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
+      height="270px" cover>
+      <template v-slot:placeholder>
+        <v-row class="fill-height ma-0" align="center" justify="center">
+          <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
+        </v-row>
+      </template>
+    </v-img>
+
+    <v-card-title>
+      {{ post.title }}
+    </v-card-title>
+
+    <div v-if="post.excerpt">
+      <v-card-subtitle>
+        {{ post.excerpt }}
+      </v-card-subtitle>
+    </div>
+
+    <div class="mx-5">
+      <small>Author : {{ post.author }}</small>
+      <br>
+      <small>Sumber : {{ post.originalUrl }}</small>
+      <br>
+
+      <div class="card-content-title" v-if="post.excerpt">
+        {{ post.excerpt ? post.excerpt : '-' }}
+      </div>
+      <div class="card-content-title" v-else>
+        {{ extractFirstSentence(post.content) ? extractFirstSentence(post.content) : '-' }}
+      </div>
+    </div>
+
+    <div style="position: relative; height: 80px;">
+      <ButtonReadPost :jenisPost="jenisPost" :post="post" style="position: absolute ; bottom: 0px;" />
+      <small style="position: absolute ; bottom: 25px; right: 25px; color: grey;">Published : {{
+        formatDate(post.publishDate) }}
+      </small>
+    </div>
+
+  </v-card> -->
