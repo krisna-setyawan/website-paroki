@@ -129,7 +129,8 @@
 
 .part-title {
   color: #566573;
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
+  font-weight: bold;
 }
 
 .transparent-card {

@@ -8,7 +8,7 @@
     <div class="wrapper-berita">
 
       <v-row class="d-flex justify-center">
-        <v-col cols="12" sm="11" md="6" v-for="post in posts.slice(0, displayedPostsCount)" :key="post.id">
+        <v-col cols="12" sm="11" lg="6" v-for="post in posts.slice(0, displayedPostsCount)" :key="post.id">
           <PageCardPost :post="post" :jenisPost="formattedJenisPost" />
         </v-col>
       </v-row>

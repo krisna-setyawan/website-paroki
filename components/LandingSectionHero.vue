@@ -9,9 +9,9 @@
       <v-divider class="my-5"></v-divider>
 
       <v-row class="d-flex justify-center">
-        <v-col cols="11" sm="9" md="5" lg="4" class="d-flex align-center">
-          <v-card class="mx-auto py-5 text-center card-jadwal" min-height="560" min-width="100%" elevation="2">
-            <div class="py-auto">
+        <v-col cols="11" sm="9" md="5" lg="4" style="position: relative;">
+          <v-card class=" py-5 text-center card-jadwal" min-height="560" min-width="100%" elevation="2">
+            <div class="py-auto list-jadwal">
               <span class="mb-0 part-title">Jadwal Misa</span>
               <v-list class="mx-5 ">Jumat : 17:00 WIB</v-list>
               <v-list class="mx-5 ">Sabtu : 18:00 WIB</v-list>
@@ -86,3 +86,56 @@ export default {
   },
 };
 </script>
+
+
+
+<style>
+.list-jadwal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 420px) {
+  .list-jadwal span {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 533px) {
+  .list-jadwal span {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .list-jadwal span {
+    font-size: 29px;
+  }
+}
+
+@media (min-width: 959px) {
+  .list-jadwal span {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .list-jadwal span {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .list-jadwal span {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1990px) {
+  .list-jadwal span {
+    font-size: 23px;
+  }
+}
+</style>

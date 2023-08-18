@@ -13,11 +13,11 @@
       </v-row>
 
       <div class="d-flex justify-center mt-5">
-        <v-btn variant="outlined" rounded="xl" size="x-large">
-          <NuxtLink :to="`/${formattedJenisPost}`" class="text-decoration-none text-grey-darken-4">
+        <NuxtLink :to="`/${formattedJenisPost}`" class="text-decoration-none text-grey-darken-4">
+          <v-btn variant="outlined" rounded="xl" size="x-large">
             Lihat {{ jenisPost }} lainnya
-          </NuxtLink>
-        </v-btn>
+          </v-btn>
+        </NuxtLink>
       </div>
     </v-container>
   </div>
