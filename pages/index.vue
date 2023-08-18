@@ -1,9 +1,9 @@
 <template>
   <div>
-    <HeroSection />
-    <SejarahSection class="section" />
-    <SectionTopFive class="section" :posts="news" jenisPost="Berita" />
-    <SectionTopFive class="section" :posts="articles" jenisPost="Artikel" />
+    <LandingSectionHero />
+    <LandingSejarahSection class="section" />
+    <LandingSectionTopFive class="section" :posts="news" jenisPost="Berita" />
+    <LandingSectionTopFive class="section" :posts="articles" jenisPost="Artikel" />
     <Footer class="section" />
   </div>
 </template>

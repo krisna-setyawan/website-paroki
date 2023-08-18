@@ -1,7 +1,7 @@
 <template>
   <div class="bg-section-180">
     <v-container class="wrapper-produk">
-      <ContentDetailBerita :berita="berita" />
+      <PageDetailPost :post="berita" />
     </v-container>
   </div>
   <Footer class="section" />
