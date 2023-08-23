@@ -3,7 +3,7 @@
 
     <v-col cols="12" sm="3">
       <div class="bg-white py-4" style="border-radius: 10px;">
-        <v-img class="my-5 mx-5" height="600"
+        <v-img class="my-5 mx-5"
           :lazy-src="produk.images ? produk.images : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
           :src="produk.images ? produk.images : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'">
           <template v-slot:placeholder>

@@ -1,8 +1,6 @@
 <template>
-  <div class="bg-section-180">
-    <v-container class="wrapper-produk">
-      <DetailProduk :produk="produk" />
-    </v-container>
+  <div class="wrapper-detail-post">
+    <PageDetailProduk :produk="produk" />
   </div>
   <Footer class="section" />
 </template>

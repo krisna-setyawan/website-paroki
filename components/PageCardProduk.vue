@@ -20,7 +20,7 @@
 
     <v-card-text>
       <div class="mb-1">
-        <div v-html="produk.description"></div>
+        <!-- <div v-html="produk.description"></div> -->
         <div>Kategori : {{ produk.categoryName }}</div>
         <div>Harga : Rp. {{ produk.price }}</div>
         <!-- <div>Produk : {{ produk.weight }} {{ produk.unit }}</div> -->

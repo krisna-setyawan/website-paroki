@@ -31,14 +31,3 @@ export default defineNuxtConfig({
 
   ssr: false
 })
-
-
-
-
-
-// link: [
-//   { rel: 'stylesheet', href: 'assets/bootstrap/css/bootstrap.min.css' }
-// ],
-// script: [
-//   { src: 'assets/bootstrap/js/bootstrap.bundle.min.js', defer: true }
-// ],

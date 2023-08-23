@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-section-180">
+  <div class="wrapper-list-post">
 
     <div class="text-center mb-5">
       <h1 class="headline">{{ jenisPost }}</h1>

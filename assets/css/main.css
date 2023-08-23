@@ -247,6 +247,78 @@
 
 
 
+/* layar hp */
+@media (max-width: 767px) {
+  .wrapper-detail-post {
+    width: 95%;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrapper-detail-post {
+    width: 80%;
+  }
+}
+
+/* laptop dan layar yang lebih besar */
+@media (min-width: 1024px) {
+  .wrapper-detail-post {
+    width: 70%;
+  }
+}
+
+.wrapper-detail-post {
+  margin: 0 auto;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+/* layar hp */
+@media (max-width: 767px) {
+  .wrapper-list-post {
+    width: 100%;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrapper-list-post {
+    width: 90%;
+  }
+}
+
+/* laptop dan layar yang lebih besar */
+@media (min-width: 1024px) {
+  .wrapper-list-post {
+    width: 85%;
+  }
+}
+
+.wrapper-list-post {
+  margin: 0 auto;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -290,106 +362,3 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Berita */
-.wrapper-berita {
-  margin: 0px 10px;
-  text-align: justify;
-}
-
-@media only screen and (min-width: 599px) {
-  .wrapper-berita {
-    margin: 0px 50px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 927px) {
-  .wrapper-berita {
-    margin: 0px 40px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .wrapper-berita {
-    margin: 0px 60px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .wrapper-berita {
-    margin: 0px 120px;
-    text-align: justify;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Artikel */
-.wrapper-artikel {
-  margin: 0px 10px;
-  text-align: justify;
-}
-
-@media only screen and (min-width: 599px) {
-  .wrapper-artikel {
-    margin: 0px 50px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 927px) {
-  .wrapper-artikel {
-    margin: 0px 40px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .wrapper-artikel {
-    margin: 0px 60px;
-    text-align: justify;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .wrapper-artikel {
-    margin: 0px 120px;
-    text-align: justify;
-  }
-}
