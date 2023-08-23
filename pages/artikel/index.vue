@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <PageListPost :posts="artikel" jenisPost="Artikel" />
-    <Footer class="section" />
-  </div>
+  <PageListPost :posts="artikel" jenisPost="Artikel" />
+  <Footer class="section" />
 </template>
 
 <script setup>

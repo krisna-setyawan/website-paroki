@@ -1,30 +1,28 @@
 <template>
-  <div>
-    <div class="bg-section-180">
+  <div class="wrapper-list-produk">
 
-      <div class="text-center mb-5">
-        <h1 class="headline">Produk UMKM</h1>
-      </div>
+    <div class="text-center mb-5">
+      <h1 class="headline">Produk UMKM</h1>
+    </div>
 
-      <div class="wrapper-produk">
+    <div class="wrapper-produk">
 
-        <v-row class="d-flex justify-center">
-          <v-col v-for="prd in produk.slice(1, displayedProduk)" :key="prd.id" cols="12" sm="6" md="4">
+      <v-row class="d-flex justify-center">
+        <v-col v-for="prd in produk.slice(1, displayedProduk)" :key="prd.id" cols="12" sm="6" md="4">
 
-            <PageCardProduk :produk="prd" />
+          <PageCardProduk :produk="prd" />
 
-          </v-col>
-        </v-row>
-
-      </div>
-
-      <div class="d-flex justify-center my-5">
-        <v-btn variant="outlined" rounded="xl" size="x-large" @click="loadMore">Load more ..</v-btn>
-      </div>
+        </v-col>
+      </v-row>
 
     </div>
-    <Footer class="section" />
+
+    <div class="d-flex justify-center my-5">
+      <v-btn variant="outlined" rounded="xl" size="x-large" @click="loadMore">Load more ..</v-btn>
+    </div>
+
   </div>
+  <Footer class="section" />
 </template>
 
 <script setup>
