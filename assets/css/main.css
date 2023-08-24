@@ -160,7 +160,7 @@
 .card-content-title {
   font-size: 17px;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -362,3 +362,16 @@
   }
 }
 
+
+/* tabel deskripsi produk */
+.td-judul {
+  width: 20%;
+}
+
+.td-titik2 {
+  width: 3%;
+}
+
+.td-nilai {
+  width: 77%;
+}

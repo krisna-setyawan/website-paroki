@@ -2,16 +2,23 @@
   <v-card class="mx-5 card-post-in-list" style="padding: 20px 0px; margin-bottom: 40px; " elevation="3">
     <v-row class="d-flex justify-center">
       <v-col cols="10" lg="5">
-        <v-img class="align-end text-white rounded bg-grey-lighten-2 text-center"
-          :lazy-src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
-          :src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
-          height="300" cover>
-          <template v-slot:placeholder>
-            <v-row class="fill-height ma-0" align="center" justify="center">
-              <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
-            </v-row>
-          </template>
-        </v-img>
+
+        <div v-if="post.imageLink">
+          <v-img class="align-end text-white rounded bg-grey-lighten-2 text-center" height="300" cover
+            :lazy-src="post.imageLink" :src="post.imageLink">
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
+        </div>
+
+        <div v-else class="text-center post-default-img">
+          <img style="width: 100%;" class="align-end text-white rounded bg-grey-lighten-2 text-center" height="300"
+            lazy-src="../public/logo.jpg" src="../public/logo.jpg">
+        </div>
+
       </v-col>
       <v-col cols="10" lg="6" style="text-align: left;">
         <h5>{{ post.title }}</h5>
@@ -24,12 +31,16 @@
         </div>
 
         <br>
-        <p style="font-size: 13px;" class="mb-1">Author : {{ post.author }}</p>
-        <p style="font-size: 13px;" class="mb-1">Sumber : {{ post.originalUrl }}</p>
-        <p style="font-size: 13px;" class="mb-1">Published : {{ formatDate(post.publishDate) }}</p>
+        <p style="font-size: 13px;" class="mb-1">Penulis : {{ post.author }}</p>
+        <p style="font-size: 13px;" class="mb-1">Sumber : {{ post.originalUrl ? post.originalUrl : '-' }}</p>
+        <p style="font-size: 13px;" class="mb-1">{{ formatDate(post.publishDate) }}</p>
         <br>
 
-        <ButtonReadPost class="btn-baca-post-in-list" :jenisPost="jenisPost" :post="post" />
+        <div class="row justify-end">
+          <div class="col-6 text-end">
+            <ButtonReadPost class="btn-baca-post-in-list" :jenisPost="jenisPost" :post="post" />
+          </div>
+        </div>
 
       </v-col>
     </v-row>
@@ -71,54 +82,13 @@ const extractFirstSentence = (htmlContent) => {
   .btn-baca-post-in-list {
     position: absolute;
     bottom: 25px;
+    right: 25px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .post-default-img {
+    display: none;
   }
 }
 </style>
-
-
-
-<!-- Sorry Backup -->
-<!-- <v-card class="mx-auto mb-5" max-width="98%">
-    <v-img
-      :lazy-src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
-      :src="post.imageLink ? post.imageLink : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
-      height="270px" cover>
-      <template v-slot:placeholder>
-        <v-row class="fill-height ma-0" align="center" justify="center">
-          <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
-        </v-row>
-      </template>
-    </v-img>
-
-    <v-card-title>
-      {{ post.title }}
-    </v-card-title>
-
-    <div v-if="post.excerpt">
-      <v-card-subtitle>
-        {{ post.excerpt }}
-      </v-card-subtitle>
-    </div>
-
-    <div class="mx-5">
-      <small>Author : {{ post.author }}</small>
-      <br>
-      <small>Sumber : {{ post.originalUrl }}</small>
-      <br>
-
-      <div class="card-content-title" v-if="post.excerpt">
-        {{ post.excerpt ? post.excerpt : '-' }}
-      </div>
-      <div class="card-content-title" v-else>
-        {{ extractFirstSentence(post.content) ? extractFirstSentence(post.content) : '-' }}
-      </div>
-    </div>
-
-    <div style="position: relative; height: 80px;">
-      <ButtonReadPost :jenisPost="jenisPost" :post="post" style="position: absolute ; bottom: 0px;" />
-      <small style="position: absolute ; bottom: 25px; right: 25px; color: grey;">Published : {{
-        formatDate(post.publishDate) }}
-      </small>
-    </div>
-
-  </v-card> -->

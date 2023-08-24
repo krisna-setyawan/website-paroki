@@ -19,14 +19,39 @@
       <h1 class="text-brown-darken-4 mb-5">{{ produk.name }}</h1>
       <p class="mb-1"> <b>Deskripsi : </b></p>
       <div v-html="produk.description"></div>
-      <p class="mb-1"> Kategori : {{ produk.categoryName }}</p>
-      <p class="mb-1"> Harga : Rp. {{ produk.price }}</p>
-      <div>Produk : {{ produk.weight }} {{ produk.unit }}</div>
 
-      <br>
-      <div>Paroki : {{ produk.parokiName }}</div>
-      <div>Keuskupan : {{ produk.keuskupanName }}</div>
-      <div>Toko : {{ produk.shopName }}</div>
+      <table style="width: 100%;">
+        <tr>
+          <td class="td-judul">Kategori</td>
+          <td class="td-titik2">:</td>
+          <td class="td-nilai">{{ produk.categoryName }}</td>
+        </tr>
+        <tr>
+          <td class="td-judul;">Harga</td>
+          <td class="td-titik2">:</td>
+          <td class="td-nilai">{{ formatRupiah(parseInt(produk.price)) }}</td>
+        </tr>
+        <tr>
+          <td class="td-judul;">Produk</td>
+          <td class="td-titik2">:</td>
+          <td class="td-nilai">{{ produk.weight }} {{ produk.unit }}</td>
+        </tr>
+        <tr>
+          <td class="td-judul;">Paroki</td>
+          <td class="td-titik2">:</td>
+          <td class="td-nilai">{{ produk.parokiName }}</td>
+        </tr>
+        <tr>
+          <td class="td-judul;">Keuskupan</td>
+          <td class="td-titik2">:</td>
+          <td class="td-nilai">{{ produk.keuskupanName }}</td>
+        </tr>
+        <tr>
+          <td class="td-judul;">Toko</td>
+          <td class="td-titik2">:</td>
+          <td class="td-nilai">{{ produk.shopName }}</td>
+        </tr>
+      </table>
       <br>
 
       <v-btn prepend-icon="mdi-shopping-outline" color="brown" variant="outlined" class="mx-2">
@@ -52,4 +77,15 @@ const bagikanWhatsApp = (id) => {
   const whatsappURL = `https://api.whatsapp.com/send?text=${encodedURL}`;
   window.open(whatsappURL, '_blank');
 }
+
+const formatRupiah = (number) => {
+  const formatted = number.toLocaleString("id-ID", {
+    style: "currency",
+    currency: "IDR"
+  });
+
+  const withoutDecimalZeros = formatted.replace(/(\.|,)00$/, '');
+
+  return withoutDecimalZeros;
+};
 </script>

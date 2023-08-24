@@ -20,12 +20,23 @@
 
     <v-card-text>
       <div class="mb-1">
-        <!-- <div v-html="produk.description"></div> -->
-        <div>Kategori : {{ produk.categoryName }}</div>
-        <div>Harga : Rp. {{ produk.price }}</div>
-        <!-- <div>Produk : {{ produk.weight }} {{ produk.unit }}</div> -->
-        <div>Paroki : {{ produk.parokiName }}</div>
-        <!-- <div>Keuskupan : {{ produk.keuskupanName }}</div> -->
+        <table style="width: 100%;">
+          <tr>
+            <td class="td-judul">Kategori</td>
+            <td class="td-titik2">:</td>
+            <td class="td-nilai">{{ produk.categoryName }}</td>
+          </tr>
+          <tr>
+            <td class="td-judul;">Harga</td>
+            <td class="td-titik2">:</td>
+            <td class="td-nilai">{{ formatRupiah(parseInt(produk.price)) }}</td>
+          </tr>
+          <tr>
+            <td class="td-judul;">Paroki</td>
+            <td class="td-titik2">:</td>
+            <td class="td-nilai">{{ produk.parokiName ? produk.parokiName : '-' }}</td>
+          </tr>
+        </table>
       </div>
     </v-card-text>
 
@@ -57,5 +68,16 @@ const bagikanWhatsApp = (id) => {
   const encodedURL = encodeURIComponent(fullMessage);
   const whatsappURL = `https://api.whatsapp.com/send?text=${encodedURL}`;
   window.open(whatsappURL, '_blank');
+};
+
+const formatRupiah = (number) => {
+  const formatted = number.toLocaleString("id-ID", {
+    style: "currency",
+    currency: "IDR"
+  });
+
+  const withoutDecimalZeros = formatted.replace(/(\.|,)00$/, '');
+
+  return withoutDecimalZeros;
 };
 </script>

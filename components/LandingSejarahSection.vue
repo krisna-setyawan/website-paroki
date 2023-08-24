@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-section-360">
+  <div>
     <v-container min-height="500" max-width="50%">
       <div class="text-center mb-5">
         <h1 class="headline">Sejarah</h1>

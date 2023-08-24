@@ -1,8 +1,8 @@
 <template>
   <h1 class="judul-content">{{ post.title }}</h1>
-  <p class="mb-1">Author : {{ post.author }}</p>
-  <small>Published : {{ formatDate(post.publishDate) }}</small>
-
+  <p class="mb-1">Penulis : {{ post.author }}</p>
+  <p class="mb-1">Sumber : {{ post.originalUrl ? post.originalUrl : '-' }}</p>
+  <small>{{ formatDate(post.publishDate) }}</small>
 
   <v-divider class="my-5"></v-divider>
 

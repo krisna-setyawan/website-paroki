@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-section-180" style="padding-bottom: 50px;">
+  <div style="padding-bottom: 50px;">
     <v-container min-height="500">
       <div class="text-center mb-5">
         <h1 class="headline">{{ jenisPost }}</h1>

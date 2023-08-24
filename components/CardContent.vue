@@ -1,13 +1,15 @@
 <template>
-  <v-card class="mx-auto">
-    <v-img class="align-end text-white" height="200"
-      :lazy-src="post.imageLink
-        ? post.imageLink
-        : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'"
-      :src="post.imageLink
-        ? post.imageLink
-        : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysFdX_G4jpBhsF48Jpdoil4Y7A3yNV4T6SzzXmGPySk-N9hISAB9mPcqXdTc1mMRTJEs&usqp=CAU'" cover>
-    </v-img>
+  <v-card class="mx-auto" height="360" style="position: relative;">
+
+    <div v-if="post.imageLink">
+      <v-img class="align-end text-white" height="200" :lazy-src="post.imageLink" :src="post.imageLink" cover></v-img>
+    </div>
+
+    <div v-else class="text-center">
+      <img class="align-end text-white" height="200" lazy-src="../public/logo.jpg" src="../public/logo.jpg">
+    </div>
+
+    <hr class="mt-0">
 
     <v-card-text>
       <b class="card-content-title">{{ post.title }}</b>
@@ -15,7 +17,7 @@
       <small>{{ formatDate(post.publishDate) }}</small>
     </v-card-text>
 
-    <div class="m-3">
+    <div class="m-3" style="position: absolute; bottom: 0; right: 0;">
       <ButtonReadPost :jenisPost="jenisPost" :post="post" />
     </div>
   </v-card>

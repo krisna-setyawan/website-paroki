@@ -16,7 +16,7 @@
     </div>
 
     <div class="d-flex justify-center my-5">
-      <v-btn variant="outlined" rounded="xl" size="x-large" @click="loadMore">Load more ..</v-btn>
+      <v-btn variant="outlined" rounded="xl" size="x-large" @click="loadMore">Muat Lebih ..</v-btn>
     </div>
 
   </div>
