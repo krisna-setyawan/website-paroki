@@ -2,8 +2,8 @@
   <div class="bg-section-180 pb-5">
     <v-container min-height="500">
       <div class="text-center welcome-text">
-        <h1>GEREJA KATOLIK</h1>
-        <h2>PAROKI SANTO FRANSISKUS ASISI - RESAPOMBO, BLITAR</h2>
+        <h1 class="text-uppercase">GEREJA KATOLIK {{ paroki.churchName }}</h1>
+        <h2 class="text-uppercase">PAROKI {{ paroki.parokiName }} - {{ paroki.city }}</h2>
       </div>
 
       <v-divider class="my-5"></v-divider>
@@ -66,25 +66,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      carouselItems: [
-        {
-          imageUrl:
-            "https://news-id.gerejayesuskristus.org/media/960x540/tangerangcleanup-1.jpeg",
-          caption: "Lorem ipsum dolor Lorem, ipsum dolor.",
-        },
-        {
-          imageUrl:
-            "https://news-id.gerejayesuskristus.org/media/960x720/tangerangcleanup-2.jpeg",
-          caption: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-        },
-      ],
-    };
+<script setup>
+const { paroki } = defineProps(["paroki"]);
+
+const carouselItems = [
+  {
+    imageUrl:
+      "https://news-id.gerejayesuskristus.org/media/960x540/tangerangcleanup-1.jpeg",
+    caption: "Lorem ipsum dolor Lorem, ipsum dolor.",
   },
-};
+  {
+    imageUrl:
+      "https://news-id.gerejayesuskristus.org/media/960x720/tangerangcleanup-2.jpeg",
+    caption: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+  },
+];
 </script>
 
 

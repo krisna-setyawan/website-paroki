@@ -5,10 +5,10 @@
       <h1 class="headline">Produk UMKM</h1>
     </div>
 
-    <div class="wrapper-produk">
+    <div class="container-fluid">
 
       <v-row class="d-flex justify-center">
-        <v-col v-for="prd in produk.slice(1, displayedProduk)" :key="prd.id" cols="12" sm="6" md="4">
+        <v-col v-for="prd in produk.slice(0, displayedProduk)" :key="prd.id" cols="12" sm="6" lg="4" xl="2">
 
           <PageCardProduk :produk="prd" />
 
@@ -22,14 +22,14 @@
     </div>
 
   </div>
-  <Footer class="section" />
+  <Footer class="section" :paroki="paroki" />
 </template>
 
 <script setup>
-const displayedProduk = ref(7); // load pertama 6
+const displayedProduk = ref(12); // load pertama 6
 
 const loadMore = () => {
-  displayedProduk.value += 6; // lalu tambah 6
+  displayedProduk.value += 12; // lalu tambah 6
 };
 
 // const { data: produk } = await useFetch("https://fakestoreapi.com/products");
@@ -41,6 +41,18 @@ const { data: produk } = await useFetch(
       id: "63be7a23ee53c61a24efc736",
       Secret: "deb5568f-bb12-4d69-8a44-a8cad4be41c3",
       Partner: "smtb",
+    },
+  }
+);
+
+// info paroki
+const { data: paroki } = await useFetch(
+  "https://api.imavi.org/imavi/parokis/view/032.045",
+  {
+    headers: {
+      id: "6147f10d33abc530a445fe84",
+      Secret: "88022467-0b5c-4e61-8933-000cd884aaa8",
+      Partner: "imavi",
     },
   }
 );

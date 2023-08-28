@@ -27,15 +27,15 @@
             <td class="td-nilai">{{ produk.categoryName }}</td>
           </tr>
           <tr>
-            <td class="td-judul;">Harga</td>
-            <td class="td-titik2">:</td>
-            <td class="td-nilai">{{ formatRupiah(parseInt(produk.price)) }}</td>
+            <!-- <td class="td-judul;">Harga</td>
+            <td class="td-titik2">:</td> -->
+            <td colspan="3" class="td-nilai"> <b> {{ formatRupiah(parseInt(produk.price)) }} </b> </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <td class="td-judul;">Paroki</td>
             <td class="td-titik2">:</td>
             <td class="td-nilai">{{ produk.parokiName ? produk.parokiName : '-' }}</td>
-          </tr>
+          </tr> -->
         </table>
       </div>
     </v-card-text>
@@ -46,13 +46,13 @@
           Detail
         </v-btn>
       </NuxtLink>
-      <v-btn density="comfortable" prepend-icon="mdi-shopping-outline" color="brown" variant="outlined">
+      <!-- <v-btn density="comfortable" prepend-icon="mdi-shopping-outline" color="brown" variant="outlined">
         Beli
       </v-btn>
       <v-btn density="comfortable" prepend-icon="mdi-whatsapp" color="brown" variant="outlined"
         @click="bagikanWhatsApp(produk._id)">
         Bagikan
-      </v-btn>
+      </v-btn> -->
     </v-card-actions>
   </v-card>
 </template>

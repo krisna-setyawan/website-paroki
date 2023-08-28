@@ -18,10 +18,9 @@ const { data: sejarah } = await useFetch(
   }
 );
 
-
 // info paroki
 const { data: paroki } = await useFetch(
-  "https://api.imavi.org/imavi/articles/get-all",
+  "https://api.imavi.org/imavi/parokis/view/032.045",
   {
     headers: {
       id: "6147f10d33abc530a445fe84",
@@ -30,6 +29,7 @@ const { data: paroki } = await useFetch(
     },
   }
 );
+
 const { data: galeri } = await useFetch('https://api.slingacademy.com/v1/sample-data/photos');
 </script>
 

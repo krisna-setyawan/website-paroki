@@ -21,7 +21,7 @@ const { data: artikel } = await useFetch(uri,
 
 // info paroki
 const { data: paroki } = await useFetch(
-  "https://api.imavi.org/imavi/articles/get-all",
+  "https://api.imavi.org/imavi/parokis/view/032.045",
   {
     headers: {
       id: "6147f10d33abc530a445fe84",
