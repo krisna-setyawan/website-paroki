@@ -7,7 +7,7 @@
 
     <div class="container-fluid">
 
-      <v-row class="d-flex justify-center">
+      <v-row class="d-flex justify-center px-lg-5">
         <v-col v-for="prd in produk.slice(0, displayedProduk)" :key="prd.id" cols="12" sm="6" lg="4" xl="2">
 
           <PageCardProduk :produk="prd" />

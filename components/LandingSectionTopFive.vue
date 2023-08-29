@@ -7,7 +7,7 @@
       <v-row class="d-flex justify-center row-berita-artikel">
         <v-col cols="12" sm="6" md="6" lg="4" v-for="post in posts.slice(0, 5)" :key="post.id">
           <div>
-            <CardContent :post="post" :jenisPost="formattedJenisPost" />
+            <CardContent :post="post" :jenisPost="formattedJenisPost" :paroki="paroki" />
           </div>
         </v-col>
       </v-row>
@@ -25,6 +25,7 @@
 
 <script setup>
 const props = defineProps({
+  paroki: Array,
   posts: Array,
   jenisPost: String,
 });

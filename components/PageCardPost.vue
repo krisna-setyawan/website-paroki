@@ -16,7 +16,7 @@
 
         <div v-else class="text-center post-default-img">
           <img style="width: 100%;" class="align-end text-white rounded bg-grey-lighten-2 text-center" height="300"
-            lazy-src="../public/logo.jpg" src="../public/logo.jpg">
+            :lazy-src="paroki.logo" :src="paroki.logo">
         </div>
 
       </v-col>
@@ -49,6 +49,7 @@
 
 <script setup>
 const props = defineProps({
+  paroki: Array,
   post: Array,
   jenisPost: String,
   show: false

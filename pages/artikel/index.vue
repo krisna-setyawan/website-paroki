@@ -1,5 +1,5 @@
 <template>
-  <PageListPost :posts="artikel" jenisPost="Artikel" />
+  <PageListPost :posts="artikel" jenisPost="Artikel" :paroki="paroki" />
   <Footer class="section" :paroki="paroki" />
 </template>
 

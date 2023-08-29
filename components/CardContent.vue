@@ -6,7 +6,7 @@
     </div>
 
     <div v-else class="text-center">
-      <img class="align-end text-white" height="200" lazy-src="../public/logo.jpg" src="../public/logo.jpg">
+      <img class="align-end text-white" height="200" :lazy-src="paroki.logo" :src="paroki.logo">
     </div>
 
     <hr class="mt-0">
@@ -25,6 +25,7 @@
 
 <script setup>
 const props = defineProps({
+  paroki: Array,
   post: Array,
   jenisPost: String,
 });

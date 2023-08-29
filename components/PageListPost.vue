@@ -9,7 +9,7 @@
 
       <v-row class="d-flex justify-center">
         <v-col cols="12" sm="11" lg="6" v-for="post in posts.slice(0, displayedPostsCount)" :key="post.id">
-          <PageCardPost :post="post" :jenisPost="formattedJenisPost" />
+          <PageCardPost :post="post" :jenisPost="formattedJenisPost" :paroki="paroki" />
         </v-col>
       </v-row>
 
@@ -24,6 +24,7 @@
 
 <script setup>
 const props = defineProps({
+  paroki: Array,
   posts: Array,
   jenisPost: String,
 });

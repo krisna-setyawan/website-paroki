@@ -19,41 +19,28 @@
     </v-card-item>
 
     <v-card-text>
-      <div class="mb-1">
-        <table style="width: 100%;">
-          <tr>
-            <td class="td-judul">Kategori</td>
-            <td class="td-titik2">:</td>
-            <td class="td-nilai">{{ produk.categoryName }}</td>
-          </tr>
-          <tr>
-            <!-- <td class="td-judul;">Harga</td>
-            <td class="td-titik2">:</td> -->
-            <td colspan="3" class="td-nilai"> <b> {{ formatRupiah(parseInt(produk.price)) }} </b> </td>
-          </tr>
-          <!-- <tr>
-            <td class="td-judul;">Paroki</td>
-            <td class="td-titik2">:</td>
-            <td class="td-nilai">{{ produk.parokiName ? produk.parokiName : '-' }}</td>
-          </tr> -->
-        </table>
+      <div class="d-flex justify-space-between">
+        <v-sheet>
+          <table style="width: 100%;">
+            <tr>
+              <td class="td-judul">Kategori</td>
+              <td class="td-titik2">:</td>
+              <td class="td-nilai">{{ produk.categoryName }}</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="td-nilai"> <b> {{ formatRupiah(parseInt(produk.price)) }} </b> </td>
+            </tr>
+          </table>
+        </v-sheet>
+
+        <v-sheet>
+          <NuxtLink :to="`/produk-umkm/${produk._id}`" style="color: inherit; text-decoration: none;">
+            <v-btn icon="mdi-eye-outline" color="brown" variant="text"></v-btn>
+          </NuxtLink>
+        </v-sheet>
       </div>
     </v-card-text>
 
-    <v-card-actions class="d-flex fill-height justify-end align-self-end mb-0 me-2">
-      <NuxtLink :to="`/produk-umkm/${produk._id}`" style="color: inherit; text-decoration: none;" class="me-2">
-        <v-btn density="comfortable" prepend-icon="mdi-eye-outline" color="brown" variant="outlined">
-          Detail
-        </v-btn>
-      </NuxtLink>
-      <!-- <v-btn density="comfortable" prepend-icon="mdi-shopping-outline" color="brown" variant="outlined">
-        Beli
-      </v-btn>
-      <v-btn density="comfortable" prepend-icon="mdi-whatsapp" color="brown" variant="outlined"
-        @click="bagikanWhatsApp(produk._id)">
-        Bagikan
-      </v-btn> -->
-    </v-card-actions>
   </v-card>
 </template>
 

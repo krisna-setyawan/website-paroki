@@ -1,5 +1,15 @@
 <template>
-  <PageListPost :posts="news" jenisPost="Berita" />
+  <div style="position: relative;">
+
+    <div style="position: absolute; right: 50px; top: 40px; width: 200px;">
+      <v-select v-model="selectedItem" :items="['Semua Paroki', `Paroki ${paroki.churchName}`]" density="compact"
+        variant="solo-filled"></v-select>
+    </div>
+
+    <PageListPost :posts="news" jenisPost="Berita" :paroki="paroki" />
+
+  </div>
+
   <Footer class="section" :paroki="paroki" />
 </template>
 
@@ -14,6 +24,8 @@ const { data: news } = await useFetch(
     },
   }
 );
+
+const selectedItem = ref('Semua Paroki');
 
 // info paroki
 const { data: paroki } = await useFetch(

@@ -2,8 +2,8 @@
   <div>
     <LandingSectionHero :paroki="paroki" />
     <LandingSejarahSection class="section" :paroki="paroki" />
-    <LandingSectionTopFive class="section" :posts="news" jenisPost="Berita" />
-    <LandingSectionTopFive class="section" :posts="articles" jenisPost="Artikel" />
+    <LandingSectionTopFive class="section" :posts="news" jenisPost="Berita" :paroki="paroki" />
+    <LandingSectionTopFive class="section" :posts="articles" jenisPost="Artikel" :paroki="paroki" />
     <Footer class="section" :paroki="paroki" />
   </div>
 </template>
